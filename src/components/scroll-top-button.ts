@@ -6,7 +6,8 @@ export function renderScrollTopButton(): string {
       type="button"
       class="scroll-top-btn"
       data-scroll-top
-      aria-label="Back to top"
+      aria-label="Scroll to top"
+      title="Scroll to top"
     >
       ${ICON_CHEVRON_UP}
     </button>`

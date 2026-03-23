@@ -30,14 +30,19 @@ export function renderContactSection(): string {
     id: 'contact',
     className: SECTION,
     children: `
-      ${sectionHeading({ title: 'Get in touch' })}
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-8 h-8 rounded-xl bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 flex items-center justify-center">
+          <svg class="w-4 h-4 text-[var(--accent-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </span>
+        ${sectionHeading({ title: 'Get in touch' })}
+      </div>
       ${sectionIntro({ text: GET_IN_TOUCH_INTRO, maxWidthClass: 'max-w-xl' })}
       ${surfaceInteractive({
         className: 'mt-8 overflow-hidden md:grid md:grid-cols-2 md:gap-0',
         revealDelayMs: 60,
         children: `
-          <div class="contact-panel border-b border-slate-200 p-6 md:border-b-0 md:border-r md:p-8 dark:border-white/[0.06]">
-            <p class="text-[15px] leading-relaxed text-slate-600 dark:text-slate-400">
+          <div class="contact-panel border-b border-[var(--border-subtle)] p-6 md:border-b-0 md:border-r md:p-8">
+            <p class="text-body text-[var(--text-secondary)] leading-relaxed">
               ${escapeHtml(CONTACT_EMAIL_PROMPT)}
             </p>
             <a
@@ -47,19 +52,26 @@ export function renderContactSection(): string {
               ${ICON_EMAIL}
               ${escapeHtml(email)}
             </a>
+            <div class="mt-8 pt-6 border-t border-[var(--border-subtle)]">
+              <p class="text-mono-label text-[var(--text-tertiary)] mb-4">Response time</p>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-sm text-[var(--text-secondary)]">Usually within 24 hours</span>
+              </div>
+            </div>
           </div>
-          <div class="contact-panel flex flex-col justify-center gap-1 p-6 md:p-8">
-            <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500 dark:text-slate-600">Other ways</p>
+          <div class="contact-panel flex flex-col justify-center gap-2 p-6 md:p-8">
+            <p class="text-mono-label text-[var(--text-tertiary)]">Other channels</p>
             <a
               href="mailto:${email}"
-              class="contact-tile group mt-4"
+              class="contact-tile group mt-2"
             >
               <span class="contact-tile__icon" aria-hidden="true">
                 ${ICON_EMAIL}
               </span>
-              <span>
-                <span class="block text-xs text-slate-500">Email</span>
-                <span class="font-mono text-sm text-slate-800 transition group-hover:text-cyan-700 dark:text-slate-300 dark:group-hover:text-cyan-300/90">${escapeHtml(email)}</span>
+              <span class="min-w-0">
+                <span class="block text-xs text-[var(--text-tertiary)]">Email</span>
+                <span class="font-mono text-sm text-[var(--text-primary)] truncate">${escapeHtml(email)}</span>
               </span>
             </a>
             <a
@@ -69,9 +81,9 @@ export function renderContactSection(): string {
               <span class="contact-tile__icon" aria-hidden="true">
                 ${ICON_PHONE}
               </span>
-              <span>
-                <span class="block text-xs text-slate-500">Phone</span>
-                <span class="font-mono text-sm text-slate-800 transition group-hover:text-cyan-700 dark:text-slate-300 dark:group-hover:text-cyan-300/90">${escapeHtml(phone)}</span>
+              <span class="min-w-0">
+                <span class="block text-xs text-[var(--text-tertiary)]">Phone</span>
+                <span class="font-mono text-sm text-[var(--text-primary)]">${escapeHtml(phone)}</span>
               </span>
             </a>
             <a
@@ -83,9 +95,9 @@ export function renderContactSection(): string {
               <span class="contact-tile__icon" aria-hidden="true">
                 ${ICON_WHATSAPP}
               </span>
-              <span>
-                <span class="block text-xs text-slate-500">WhatsApp</span>
-                <span class="text-sm text-slate-800 transition group-hover:text-cyan-700 dark:text-slate-300 dark:group-hover:text-cyan-300/90">Message on WhatsApp</span>
+              <span class="min-w-0">
+                <span class="block text-xs text-[var(--text-tertiary)]">WhatsApp</span>
+                <span class="text-sm text-[var(--text-primary)]">Quick message</span>
               </span>
             </a>
             <a
@@ -97,9 +109,9 @@ export function renderContactSection(): string {
               <span class="contact-tile__icon" aria-hidden="true">
                 ${ICON_INSTAGRAM}
               </span>
-              <span>
-                <span class="block text-xs text-slate-500">Instagram</span>
-                <span class="text-sm text-slate-800 transition group-hover:text-cyan-700 dark:text-slate-300 dark:group-hover:text-cyan-300/90">@shregarcast</span>
+              <span class="min-w-0">
+                <span class="block text-xs text-[var(--text-tertiary)]">Instagram</span>
+                <span class="text-sm text-[var(--text-primary)]">@shregarcast</span>
               </span>
             </a>
             <a
@@ -111,9 +123,9 @@ export function renderContactSection(): string {
               <span class="contact-tile__icon" aria-hidden="true">
                 ${ICON_GITHUB_MARK}
               </span>
-              <span>
-                <span class="block text-xs text-slate-500">GitHub</span>
-                <span class="text-sm text-slate-800 transition group-hover:text-cyan-700 dark:text-slate-300 dark:group-hover:text-cyan-300/90">Profile &amp; repos</span>
+              <span class="min-w-0">
+                <span class="block text-xs text-[var(--text-tertiary)]">GitHub</span>
+                <span class="text-sm text-[var(--text-primary)]">Profile & repositories</span>
               </span>
             </a>
           </div>`,

@@ -304,7 +304,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 'proj-cupid',
     category: 'backend',
-    title: 'Cupid',
+    title: 'Muse.app',
     tagline: 'Dating app API layer',
     meta: 'Rust · Axum · PostgreSQL',
     highlights: [
