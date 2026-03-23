@@ -9,6 +9,11 @@ export const email = 'sengarsinghshreyansh@gmail.com'
 export const phone = '+919264917787'
 export const github = 'https://github.com/shregar1'
 
+/** Instagram — @shregarcast */
+export const instagram = 'https://www.instagram.com/shregarcast/'
+/** WhatsApp chat link (derived from `phone`) */
+export const whatsapp = `https://wa.me/${phone.replace(/\D/g, '')}`
+
 /**
  * Tapback Memoji — https://tapback.co/memoji — same seed ⇒ same avatar (no gender API).
  * This seed is chosen for a male-presenting Memoji-style result; change the string if you want a different look.

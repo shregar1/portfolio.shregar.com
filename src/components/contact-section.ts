@@ -3,9 +3,17 @@ import {
   GET_IN_TOUCH_INTRO,
   email,
   github,
+  instagram,
   phone,
+  whatsapp,
 } from '../site-constants.ts'
-import { ICON_EMAIL, ICON_GITHUB_MARK, ICON_PHONE } from '../icons.ts'
+import {
+  ICON_EMAIL,
+  ICON_GITHUB_MARK,
+  ICON_INSTAGRAM,
+  ICON_PHONE,
+  ICON_WHATSAPP,
+} from '../icons.ts'
 import {
   SECTION,
   sectionBlock,
@@ -43,8 +51,20 @@ export function renderContactSection(): string {
           <div class="contact-panel flex flex-col justify-center gap-1 p-6 md:p-8">
             <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500 dark:text-slate-600">Other ways</p>
             <a
-              href="${tel}"
+              href="mailto:${email}"
               class="contact-tile group mt-4"
+            >
+              <span class="contact-tile__icon" aria-hidden="true">
+                ${ICON_EMAIL}
+              </span>
+              <span>
+                <span class="block text-xs text-slate-500">Email</span>
+                <span class="font-mono text-sm text-slate-800 transition group-hover:text-cyan-700 dark:text-slate-300 dark:group-hover:text-cyan-300/90">${escapeHtml(email)}</span>
+              </span>
+            </a>
+            <a
+              href="${tel}"
+              class="contact-tile group"
             >
               <span class="contact-tile__icon" aria-hidden="true">
                 ${ICON_PHONE}
@@ -52,6 +72,34 @@ export function renderContactSection(): string {
               <span>
                 <span class="block text-xs text-slate-500">Phone</span>
                 <span class="font-mono text-sm text-slate-800 transition group-hover:text-cyan-700 dark:text-slate-300 dark:group-hover:text-cyan-300/90">${escapeHtml(phone)}</span>
+              </span>
+            </a>
+            <a
+              href="${whatsapp}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-tile group"
+            >
+              <span class="contact-tile__icon" aria-hidden="true">
+                ${ICON_WHATSAPP}
+              </span>
+              <span>
+                <span class="block text-xs text-slate-500">WhatsApp</span>
+                <span class="text-sm text-slate-800 transition group-hover:text-cyan-700 dark:text-slate-300 dark:group-hover:text-cyan-300/90">Message on WhatsApp</span>
+              </span>
+            </a>
+            <a
+              href="${instagram}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-tile group"
+            >
+              <span class="contact-tile__icon" aria-hidden="true">
+                ${ICON_INSTAGRAM}
+              </span>
+              <span>
+                <span class="block text-xs text-slate-500">Instagram</span>
+                <span class="text-sm text-slate-800 transition group-hover:text-cyan-700 dark:text-slate-300 dark:group-hover:text-cyan-300/90">@shregarcast</span>
               </span>
             </a>
             <a
