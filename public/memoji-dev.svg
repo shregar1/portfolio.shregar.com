@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="28" x2="216" y2="228" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0.26"/>
+    </linearGradient>
+    <radialGradient id="face" cx="128" cy="125" r="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f0d4bc"/>
+      <stop offset="0.55" stop-color="#e8c4a8"/>
+      <stop offset="1" stop-color="#d9a88a"/>
+    </radialGradient>
+    <linearGradient id="lip" x1="118" y1="178" x2="138" y2="194" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e8a0a8"/>
+      <stop offset="0.5" stop-color="#d87888"/>
+      <stop offset="1" stop-color="#c45a6a"/>
+    </linearGradient>
+    <linearGradient id="iris" x1="96" y1="136" x2="108" y2="148" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5c3d2e"/>
+      <stop offset="0.45" stop-color="#7a4e32"/>
+      <stop offset="1" stop-color="#4a3018"/>
+    </linearGradient>
+    <linearGradient id="iris2" x1="148" y1="136" x2="160" y2="148" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5c3d2e"/>
+      <stop offset="0.45" stop-color="#7a4e32"/>
+      <stop offset="1" stop-color="#4a3018"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="url(#bg)"/>
+  <circle cx="128" cy="128" r="108" fill="#0a0a0c" opacity="0.32"/>
+
+  <!-- Messy curly hair — back volume -->
+  <path fill="#2d1810" d="M48 140c4-52 36-96 80-96s76 44 80 96c-8-40-36-68-80-68s-72 28-80 68Z"/>
+  <path fill="#3d2818" d="M56 128c6-48 34-80 72-80s66 32 72 80c-10-36-38-58-72-58s-62 22-72 58Z"/>
+
+  <!-- Curl clumps (messy silhouette) -->
+  <g fill="#3d2818">
+    <ellipse cx="72" cy="88" rx="22" ry="28" transform="rotate(-15 72 88)"/>
+    <ellipse cx="184" cy="90" rx="22" ry="28" transform="rotate(15 184 90)"/>
+    <ellipse cx="96" cy="56" rx="26" ry="32" transform="rotate(-8 96 56)"/>
+    <ellipse cx="128" cy="48" rx="30" ry="36"/>
+    <ellipse cx="160" cy="56" rx="26" ry="32" transform="rotate(8 160 56)"/>
+    <ellipse cx="52" cy="112" rx="18" ry="24" transform="rotate(-25 52 112)"/>
+    <ellipse cx="204" cy="114" rx="18" ry="24" transform="rotate(25 204 114)"/>
+    <ellipse cx="112" cy="44" rx="20" ry="26"/>
+    <ellipse cx="144" cy="44" rx="20" ry="26"/>
+  </g>
+  <g fill="#2d1810" opacity="0.85">
+    <circle cx="88" cy="72" r="14"/>
+    <circle cx="168" cy="74" r="14"/>
+    <circle cx="128" cy="58" r="16"/>
+    <circle cx="64" cy="100" r="12"/>
+    <circle cx="192" cy="102" r="12"/>
+  </g>
+
+  <!-- Ears -->
+  <ellipse cx="60" cy="138" fill="url(#face)" rx="15" ry="19" transform="rotate(-10 60 138)"/>
+  <ellipse cx="196" cy="138" fill="url(#face)" rx="15" ry="19" transform="rotate(10 196 138)"/>
+
+  <!-- Face — clean shave, soft jaw -->
+  <ellipse cx="128" cy="136" fill="url(#face)" rx="66" ry="76"/>
+
+  <!-- Cheek tint -->
+  <ellipse cx="86" cy="150" fill="#f472b6" opacity="0.14" rx="16" ry="10"/>
+  <ellipse cx="170" cy="150" fill="#f472b6" opacity="0.14" rx="16" ry="10"/>
+
+  <!-- Eyebrows -->
+  <path stroke="#3d2818" stroke-linecap="round" stroke-width="4.5" d="M82 114c10-8 24-8 34 2"/>
+  <path stroke="#3d2818" stroke-linecap="round" stroke-width="4.5" d="M140 116c10-10 24-10 34 0"/>
+
+  <!-- Eye whites -->
+  <ellipse cx="98" cy="132" fill="#fefefe" rx="14" ry="15"/>
+  <ellipse cx="158" cy="132" fill="#fefefe" rx="14" ry="15"/>
+
+  <!-- Brown irises -->
+  <ellipse cx="98" cy="134" fill="url(#iris)" rx="9" ry="10"/>
+  <ellipse cx="158" cy="134" fill="url(#iris2)" rx="9" ry="10"/>
+
+  <!-- Pupils + depth -->
+  <ellipse cx="98" cy="134" fill="#1a1208" rx="4.5" ry="5"/>
+  <ellipse cx="158" cy="134" fill="#1a1208" rx="4.5" ry="5"/>
+  <ellipse cx="100" cy="132" fill="#fff" opacity="0.85" rx="2.2" ry="2.6"/>
+  <ellipse cx="160" cy="132" fill="#fff" opacity="0.85" rx="2.2" ry="2.6"/>
+  <ellipse cx="96.5" cy="135.5" fill="#fff" opacity="0.35" rx="1.2" ry="1.4"/>
+  <ellipse cx="156.5" cy="135.5" fill="#fff" opacity="0.35" rx="1.2" ry="1.4"/>
+
+  <!-- Soft upper lids -->
+  <path stroke="#c9a088" stroke-linecap="round" stroke-width="1.2" opacity="0.35" d="M86 124c4-4 12-6 20-4M150 124c4-4 12-6 20-4"/>
+
+  <!-- Nose -->
+  <path stroke="#c49a7a" stroke-linecap="round" stroke-width="2.2" opacity="0.45" d="M128 148c0 6 2 12 6 14"/>
+  <ellipse cx="128" cy="158" fill="#d4a88a" opacity="0.25" rx="8" ry="5"/>
+
+  <!-- Juicy lips (fuller lower lip) -->
+  <path fill="#c65a72" d="M102 170c8-2 18-4 26-4s18 2 26 4c0 4-12 10-26 10s-26-6-26-10Z"/>
+  <path fill="url(#lip)" d="M100 174c10 0 18 10 28 10s18-10 28-10c0 12-12 20-28 20s-28-8-28-20Z"/>
+  <path fill="#f5b8c4" opacity="0.65" d="M108 182c6 8 14 10 20 10s14-2 20-10c-4 6-12 8-20 8s-16-2-20-8Z"/>
+  <path stroke="#fff" stroke-linecap="round" stroke-width="1.8" opacity="0.45" d="M118 178c6 2 12 3 14 3s8-1 14-3"/>
+  <ellipse cx="128" cy="188" fill="#a84858" opacity="0.28" rx="12" ry="5"/>
+
+  <!-- Forehead curl strands (messy over face edge) -->
+  <path fill="#3d2818" d="M74 94c10 14 8 32-4 38 6-18 4-34-8-42 12 10 16 24 12 4Z" opacity="0.92"/>
+  <path fill="#3d2818" d="M182 96c-10 14-8 32 4 38-6-18-4-34 8-42-12 10-16 24-12 4Z" opacity="0.92"/>
+  <ellipse cx="118" cy="78" rx="14" ry="18" fill="#3d2818" transform="rotate(-20 118 78)"/>
+  <ellipse cx="138" cy="78" rx="14" ry="18" fill="#3d2818" transform="rotate(20 138 78)"/>
+
+  <!-- Crew neck / tee -->
+  <path fill="#0e7490" d="M56 198c0-26 32-48 72-48s72 22 72 48v58H56v-58Z"/>
+  <path fill="#155e75" d="M128 150c-22 0-40 10-48 24 14-6 30-10 48-10s34 4 48 10c-8-14-26-24-48-24Z"/>
+  <ellipse cx="128" cy="168" fill="#164e63" rx="22" ry="8"/>
+</svg>
