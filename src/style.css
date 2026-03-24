@@ -572,6 +572,14 @@
     background: linear-gradient(180deg, transparent 0%, var(--bg-secondary) 100%);
   }
 
+  .hero-visual__name span {
+    filter: drop-shadow(0 2px 24px rgba(255, 255, 255, 0.55));
+  }
+
+  .dark .hero-visual__name span {
+    filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.45));
+  }
+
   .hero-memoji {
     @apply relative;
     animation: float 6s ease-in-out infinite;

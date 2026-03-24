@@ -6,6 +6,19 @@ export interface SkillGroup {
 }
 
 export const email = 'sengarsinghshreyansh@gmail.com'
+
+/**
+ * EmailJS configuration
+ * Get your credentials from https://dashboard.emailjs.com/
+ * - SERVICE_ID: Your EmailJS service ID
+ * - TEMPLATE_ID: Your EmailJS template ID
+ * - PUBLIC_KEY: Your EmailJS public key
+ */
+export const emailjsConfig = {
+  serviceId: 'YOUR_SERVICE_ID',
+  templateId: 'YOUR_TEMPLATE_ID',
+  publicKey: 'YOUR_PUBLIC_KEY',
+} as const
 export const phone = '+919264917787'
 export const github = 'https://github.com/shregar1'
 

@@ -42,17 +42,54 @@ export function renderContactSection(): string {
         revealDelayMs: 60,
         children: `
           <div class="contact-panel border-b border-[var(--border-subtle)] p-6 md:border-b-0 md:border-r md:p-8">
-            <p class="text-body text-[var(--text-secondary)] leading-relaxed">
+            <p class="text-body text-[var(--text-secondary)] leading-relaxed mb-6">
               ${escapeHtml(CONTACT_EMAIL_PROMPT)}
             </p>
-            <a
-              href="mailto:${email}"
-              class="btn-primary mt-6 inline-flex w-full items-center justify-center gap-2 sm:w-auto"
-            >
-              ${ICON_EMAIL}
-              ${escapeHtml(email)}
-            </a>
-            <div class="mt-8 pt-6 border-t border-[var(--border-subtle)]">
+            <form id="contact-form" class="space-y-4">
+              <div>
+                <label for="from_name" class="block text-sm font-medium text-[var(--text-secondary)] mb-1">Name</label>
+                <input 
+                  type="text" 
+                  id="from_name" 
+                  name="from_name" 
+                  required 
+                  class="w-full px-4 py-2 rounded-lg bg-[var(--surface-primary)] border border-[var(--border-subtle)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50 transition-colors"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label for="from_email" class="block text-sm font-medium text-[var(--text-secondary)] mb-1">Email</label>
+                <input 
+                  type="email" 
+                  id="from_email" 
+                  name="from_email" 
+                  required 
+                  class="w-full px-4 py-2 rounded-lg bg-[var(--surface-primary)] border border-[var(--border-subtle)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50 transition-colors"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-[var(--text-secondary)] mb-1">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="4" 
+                  required 
+                  class="w-full px-4 py-2 rounded-lg bg-[var(--surface-primary)] border border-[var(--border-subtle)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50 transition-colors resize-none"
+                  placeholder="Tell me about your project, role, or just say hello..."
+                ></textarea>
+              </div>
+              <button 
+                type="submit" 
+                id="contact-form-submit"
+                class="btn-primary w-full inline-flex items-center justify-center gap-2"
+              >
+                ${ICON_EMAIL}
+                Send message
+              </button>
+              <div id="contact-form-status" role="status" aria-live="polite"></div>
+            </form>
+            <div class="mt-6 pt-6 border-t border-[var(--border-subtle)]">
               <p class="text-mono-label text-[var(--text-tertiary)] mb-4">Response time</p>
               <div class="flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>

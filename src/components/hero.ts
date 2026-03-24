@@ -32,8 +32,13 @@ export function renderHero(): string {
               style="background: linear-gradient(180deg, transparent 0%, var(--bg-secondary, #fafafa) 100%);"
               aria-hidden="true"
             ></div>
+            <div class="hero-visual__name pointer-events-none absolute left-4 top-4 z-20 sm:left-6 sm:top-5" aria-hidden="true">
+              <span class="text-gradient font-display text-3xl font-bold tracking-[0.22em] sm:text-4xl md:text-5xl">
+                ${escapeHtml(siteDisplay.name.toUpperCase())}
+              </span>
+            </div>
             <!-- Decorative elements -->
-            <div class="absolute top-4 right-4 hero-in hero-in-1">
+            <div class="absolute top-4 right-4 z-10 hero-in hero-in-1">
               <span class="hero-status">Available for opportunities</span>
             </div>
           </div>

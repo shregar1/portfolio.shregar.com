@@ -1,6 +1,7 @@
 import { initHeroScenes } from '../hero-scenes.ts'
 import { heroSceneCopy } from '../site-constants.ts'
 import { initClock } from './init-clock.ts'
+import { initContactForm } from './init-contact-form.ts'
 import { initExperienceUI } from './init-experience-ui.ts'
 import { initMotion } from './init-motion.ts'
 import { initProjectsUI } from './init-projects-ui.ts'
@@ -15,4 +16,5 @@ export function bootstrapPortfolio(root: HTMLElement): void {
   initExperienceUI(root)
   initProjectsUI(root)
   initHeroScenes(root, heroSceneCopy)
+  initContactForm(root)
 }
